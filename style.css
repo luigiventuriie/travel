@@ -1,0 +1,78 @@
+*{
+    font-family: "Poppins";
+    color: white;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url("https://cdn.pixabay.com/photo/2023/08/04/22/59/sunset-8170058_1280.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
+#NavBar{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, rgba(50, 50, 50, 0.7), rgba(50, 50, 50, 0.2));
+}
+
+#Navigation > a {
+    cursor: pointer;
+}
+
+#SearchBar{
+    background-color: #fff;
+    padding: 0.5rem 0.7rem;
+    border-radius: 20px;
+}
+
+#SearchBar > input:active,
+#SearchBar > input:focus,
+#SearchBar > input:focus-visible{
+    outline: none;
+}
+
+#SearchBar > input{
+    border: none !important;
+    color: orange !important;
+    min-width: 220px;
+    margin-left: 5px;
+}
+
+#SearchBar > input::placeholder{
+    color: orange !important;
+}
+
+
+#SearchBar > i{
+    color: orange !important;
+}
+
+#SearchBar > button{
+    background-color: #ffa50088;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#Content{
+    width: 75vw;
+    margin: auto;
+}
+
+.home_content > h1{
+    font-size: 4rem;
+    width: 40%;
+}
+
+.home_content > div{
+    width: 60%;
+    font-size: small;
+}
