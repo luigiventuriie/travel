@@ -31,35 +31,40 @@ body{
     border-radius: 20px;
 }
 
-#SearchBar > input:active,
-#SearchBar > input:focus,
-#SearchBar > input:focus-visible{
+#SearchBar form{margin-bottom: 0;}
+#SearchBar  input:active,
+#SearchBar  input:focus,
+#SearchBar  input:focus-visible{
     outline: none;
 }
 
-#SearchBar > input{
+#SearchBar  input{
     border: none !important;
     color: orange !important;
     min-width: 220px;
     margin-left: 5px;
 }
 
-#SearchBar > input::placeholder{
+#SearchBar  input::placeholder{
     color: orange !important;
 }
 
 
-#SearchBar > i{
+#SearchBar  i{
     color: orange !important;
 }
 
-#SearchBar > button{
+.home_content button,
+#SearchBar button{
     background-color: #ffa50088;
     border-radius: 5px;
     border: 1px solid gray;
     padding: 0.25rem 0.5rem;
     cursor: pointer;
     margin-left: 5px;
+}
+.home_content button{
+    font-size: 1.5rem;
 }
 
 #Content{
@@ -75,4 +80,19 @@ body{
 .home_content > div{
     width: 60%;
     font-size: small;
+}
+
+#Social{
+    width: 35px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.3rem;
+}
+
+#ContentContainer{
+    display: flex;
 }
