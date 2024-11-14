@@ -17,8 +17,9 @@ function loadContent(page) {
         });
 }
 
-function fetchReccomendations(form){
-    const search = form.getElementsByTagName('input')[0].value;
+var reccomendations = [];
+
+function fetchReccomendations(){
 
     fetch('travel_recommendation_api.json')
     .then(response => {
@@ -28,13 +29,8 @@ function fetchReccomendations(form){
         return response.json();
     })
     .then(json => {
-        const validKey = Object.keys(json).find( x=>  x.includes(search))
-        if(validKey){
-            return json[validKey]
-        }
-        else{
-            return []
-        }
+        reccomendations = json;
+        console.log(json)
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
@@ -43,4 +39,18 @@ function fetchReccomendations(form){
 
 
 loadContent("home.html")
+fetchReccomendations();
 
+function keywordSearch(form){
+    const search = String(form.getElementsByTagName('input')[0].value);
+    
+
+    const validKey = Object.keys(reccomendations).find( x=>  x.includes(search.toLowerCase()))
+    if(validKey){
+        console.log(reccomendations[validKey])
+        return reccomendations[validKey]
+    }
+    else{
+        return []
+    }
+}
