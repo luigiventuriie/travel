@@ -43,7 +43,7 @@ fetchReccomendations();
 
 function keywordSearch(form){
     const search = String(form.getElementsByTagName('input')[0].value);
-    
+    if(!search || search === '') return;
 
     const validKey = Object.keys(reccomendations).find( x=>  x.includes(search.toLowerCase()))
     if(validKey){
@@ -53,4 +53,8 @@ function keywordSearch(form){
     else{
         return []
     }
+}
+
+function clear(form){
+    form.getElementsByTagName('input')[0].value = '';
 }

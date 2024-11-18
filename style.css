@@ -23,6 +23,7 @@ body{
 
 #Navigation > a {
     cursor: pointer;
+    margin-left: 25px;
 }
 
 #SearchBar{
@@ -72,12 +73,12 @@ body{
     margin: auto;
 }
 
-.home_content > h1{
+.home_content  h1{
     font-size: 4rem;
     width: 40%;
 }
 
-.home_content > div{
+.home_content  div{
     width: 60%;
     font-size: small;
 }
@@ -95,4 +96,58 @@ body{
 
 #ContentContainer{
     display: flex;
+}
+
+#ContactPage{
+    display: flex;
+}
+
+#ContactPage h1{
+    font-size: 3.5rem;
+}
+#ContactPage form{
+    margin-left: 2.5rem;
+    padding: 2rem;
+    background: linear-gradient(to right, rgba(50, 50, 50, 0.7), rgba(50, 50, 50, 0.2));
+
+}
+
+#ContactPage input,
+#ContactPage textarea {
+    color: white;
+    background-color: transparent;
+}
+
+#ContactPage button{
+    background-color: #ffa50088;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    margin-left: 5px;
+    width: 100%;
+}
+
+#Team{
+    display: flex;
+    gap: 1rem;
+}
+#TeamList{
+    background: linear-gradient(to right, rgba(50, 50, 50, 0.7), rgba(50, 50, 50, 0.2));
+    gap: 1rem;
+
+    display: flex;
+}
+.team-member{
+    font-size: 13px;
+}
+
+.team-member .role{
+    text-align: center;
+    background-color: #ffa50088;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    margin-left: 5px;
 }
