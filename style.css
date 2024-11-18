@@ -55,6 +55,10 @@ body{
     color: orange !important;
 }
 
+.home_content{
+    display:flex;
+}
+
 .home_content button,
 #SearchBar button{
     background-color: #ffa50088;
@@ -79,7 +83,7 @@ body{
 }
 
 .home_content  div{
-    width: 60%;
+    width: 80%;
     font-size: small;
 }
 
