@@ -72,12 +72,17 @@ function createDestinationElement(destination) {
     container.appendChild(destinationDiv);
 }
 
+function clearContent(){
+    document.getElementById("ResultContent").innerHTML = "";
+}
+
 function keywordSearch(form){
     const search = String(form.getElementsByTagName('input')[0].value);
     if(!search || search === '') return;
-
+    
     const validKey = Object.keys(reccomendations).find( x=>  x.includes(search.toLowerCase()))
     if(validKey){
+        clearContent();
         console.log(reccomendations[validKey])
         
         const resultContent = document.getElementById("ResultContent")
@@ -93,6 +98,3 @@ function keywordSearch(form){
     }
 }
 
-function clear(form){
-    form.getElementsByTagName('input')[0].value = '';
-}
